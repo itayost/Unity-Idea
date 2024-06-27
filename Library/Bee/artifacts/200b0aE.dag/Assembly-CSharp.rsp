@@ -385,6 +385,7 @@
 "Assets/Scripts/LibraryButtonBehaviour.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
 "Assets/Scripts/PlayersBehaviour.cs"
+"Assets/Scripts/SurpisesBehaviour.cs"
 "Assets/Scripts/Tryout.cs"
 -langversion:9.0
 
