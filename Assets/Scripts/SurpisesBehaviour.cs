@@ -8,13 +8,10 @@ using System.Numerics;
 
 public class SurpisesBehaviour : MonoBehaviour
 {
-    public GameObject keys;
-    //public static int numKeys = 0;
-    //public Text keysText;
     public GameObject player;
     public bool exists = true;
-    public float minX, maxX, minZ, maxZ; // Boundaries of the table
-    public float yPosition = (float)-9.187248;
+    private float minX, maxX, minZ, maxZ; // Boundaries of the table
+    private float yPosition = (float)-9.187248;
     public int speed;
     // Start is called before the first frame update
     void Start()
@@ -37,15 +34,11 @@ public class SurpisesBehaviour : MonoBehaviour
     {
         if (other.gameObject == player.gameObject)
         {
-            //numKeys++;
-            //keysText.text = "Keys: " + numKeys + "/4";
             exists = false;
-            //PersistentObjectManager.Instance.setHasCoin(false);
+
             playerNameSpace.PlayerBehaviour player1 = player.GetComponent<playerNameSpace.PlayerBehaviour>();
             player1.UpdateSpeed(speed);
             RandomizePosition();
-            //AudioSource sound = keys.GetComponent<AudioSource>();
-            //sound.Play();
         }
     }
 
@@ -57,16 +50,5 @@ public class SurpisesBehaviour : MonoBehaviour
         UnityEngine.Debug.Log("x,y,z: " + randomX + ", " + yPosition + ", " + randomZ);
         UnityEngine.Vector3 newPos = new UnityEngine.Vector3(randomX, yPosition, randomZ);
         transform.localPosition = newPos;
-    }
-
-    public static int getNumOfKeys()
-    {
-        return 0;
-        //return numKeys;
-    }
-
-    public static void setNumOfKeys(int newNum)
-    {
-        //numKeys = newNum;
     }
 }

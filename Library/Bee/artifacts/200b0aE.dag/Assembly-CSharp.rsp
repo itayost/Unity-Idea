@@ -383,6 +383,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2023.2.2f1-arm64/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2023.2.2f1-arm64/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scripts/LibraryButtonBehaviour.cs"
+"Assets/Scripts/LifeBehaviour.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
 "Assets/Scripts/PlayersBehaviour.cs"
 "Assets/Scripts/ScoreBehaviour.cs"

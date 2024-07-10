@@ -31,7 +31,11 @@ public class ScoreBehaviour : MonoBehaviour
             scoreText.text = "Score: " + score;
 
             UnityEngine.Vector3 newPos = new UnityEngine.Vector3(posX, posY, posZ);
+            player.SetActive(false);
+
             player.transform.localPosition = newPos;
+
+            player.SetActive(true);
         }
     }
 

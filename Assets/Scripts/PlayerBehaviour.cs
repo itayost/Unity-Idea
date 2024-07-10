@@ -11,7 +11,7 @@ namespace playerNameSpace
         public GameObject aCamera;
         CharacterController controller;
         float speed = 4;
-        float angularSpeed = 50;
+        float angularSpeed = 100;
         //AudioSource footStepSnd;
 
         public static bool canMove = true;
