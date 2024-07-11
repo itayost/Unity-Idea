@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using playerNameSpace;
 using UnityEngine;
 
 public class LifeBehaviour : MonoBehaviour
@@ -14,6 +15,8 @@ public class LifeBehaviour : MonoBehaviour
     public int effect;
     private bool canTrigger = true;
     public float triggerCooldown = 1f; // 1 second cooldown
+
+    public GameObject fade;
 
     void Start()
     {
@@ -68,6 +71,14 @@ public class LifeBehaviour : MonoBehaviour
 
     private void gameOver()
     {
-        // Implement your game over logic here
+        PlayerBehaviour.setCanMove(false);
+        StartCoroutine(StartFade());
+    }
+
+    IEnumerator StartFade()
+    {
+        Animator a = fade.GetComponent<Animator>();
+        a.SetInteger("isOver", 1);
+        yield return new WaitForSeconds(4f);
     }
 }
